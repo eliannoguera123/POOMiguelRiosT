@@ -12,7 +12,7 @@ public class AppUniv {
         Docente profe = new Docente("1234", "Alejo Ramirez");
         Asignatura poo = new Asignatura("POO", profe);
 
-        Estudiante lema = new Estudiante("34546", "Alejandro Lema");
+        Estudiante lema = new Estudiante("34546", "Jose Ricardo");
         Nota notaLema = new Nota(poo);
         notaLema.setNotaParcial(3);
         notaLema.setNotaFinal(4.7);
