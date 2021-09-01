@@ -16,7 +16,7 @@ public class AppUniv {
         Nota notaLema = new Nota(poo);
         notaLema.setNotaParcial(3);
         notaLema.setNotaFinal(4.7);
-        notaLema.setNotasSeguimiento(Arrays.asList(5.0, 1.0, 2.5, 4.0, 3.2));
+        notaLema.setNotasSeguimiento(Arrays.asList(5.0, 1.2, 2.5, 4.0, 3.2));
         lema.setNota(notaLema);
 
         Estudiante melanie = new Estudiante("46564", "Melanie Giraldo");
