@@ -2,16 +2,18 @@ package poo.taller.punto2a.dominio;
 
 public class Mecato {
     //Atributos
-    private String nombre;
+    public String nombre;
     private int codigo;
     private int precio;
-    private int cantidadActual;
+    public int cantidadActual;
 
     //Constructor
-    public Mecato(String nombre, int codigo) {
+    public Mecato(String nombre, int codigo, int cantidadActual) {
         this.nombre = nombre;
         this.codigo = codigo;
+        this.cantidadActual = cantidadActual;
     }
+
 
     //Genero los Getter
     public String getNombre() {
@@ -31,11 +33,6 @@ public class Mecato {
     }
 
     //Genero los Setter
-
-
-    public void setPrecio(int precio) {
-        this.precio = precio;
-    }
 
     public void setCantidadActual(int cantidadActual) {
         this.cantidadActual = cantidadActual;
