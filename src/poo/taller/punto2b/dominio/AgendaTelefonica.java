@@ -5,7 +5,7 @@ import java.util.List;
 public class AgendaTelefonica {
     private int cantidadTotalContactos;
     private List<Contacto> contactosFavoritos;
-
+    //
 
     public AgendaTelefonica(int cantidadTotalContactos, List<Contacto> contactosFavoritos) {
         this.cantidadTotalContactos = cantidadTotalContactos;

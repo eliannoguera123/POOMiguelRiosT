@@ -9,6 +9,7 @@ public class Contacto {
         this.nombre = nombre;
         this.apellido = apellido;
         this.numero = numero;
+        //
     }
 
     public String getNombre() {
