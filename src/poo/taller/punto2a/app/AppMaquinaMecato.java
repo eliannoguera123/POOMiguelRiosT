@@ -15,6 +15,7 @@ public class AppMaquinaMecato {
 
         maquina.getProductos().add(producto1);
         maquina.getProductos().add(producto2);
+        System.out.println(producto1);
 
        // List<Mecato> product = maquina.sacarUnidadNombre(producto1);
 
