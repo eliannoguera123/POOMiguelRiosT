@@ -1,27 +1,32 @@
 package poo.taller.punto2a.dominio;
 
 public class Mecato {
-    //Atributos
-    public String nombre;
+    public static final int CANTIDAD_MAXIMA_DE_UNIDADES = 8;
     private int codigo;
+    private String nombre;
     private int precio;
-    public int cantidadActual;
+    private int cantidadActual;
 
-    //Constructor
-    public Mecato(String nombre, int codigo, int cantidadActual) {
-        this.nombre = nombre;
+    public Mecato(int codigo, String nombre, int precio) {
         this.codigo = codigo;
-        this.cantidadActual = cantidadActual;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.cantidadActual = CANTIDAD_MAXIMA_DE_UNIDADES;
     }
 
-
-    //Genero los Getter
-    public String getNombre() {
-        return nombre;
+    public Mecato(int codigo, String nombre, int precio, int cantidadActual) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.cantidadActual = cantidadActual;
     }
 
     public int getCodigo() {
         return codigo;
+    }
+
+    public String getNombre() {
+        return nombre;
     }
 
     public int getPrecio() {
@@ -32,7 +37,9 @@ public class Mecato {
         return cantidadActual;
     }
 
-    //Genero los Setter
+    public void setPrecio(int precio) {
+        this.precio = precio;
+    }
 
     public void setCantidadActual(int cantidadActual) {
         this.cantidadActual = cantidadActual;
