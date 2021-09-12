@@ -40,6 +40,7 @@ public class DispensadorMecato {
         return mecatoBuscado;
     }
 
+
     public boolean agregar(Mecato mecato) {
         if (this.productos.size() < CANTIDAD_MAXIMA_DE_PRODUCTOS) {
             Mecato m = buscar(mecato.getCodigo());
