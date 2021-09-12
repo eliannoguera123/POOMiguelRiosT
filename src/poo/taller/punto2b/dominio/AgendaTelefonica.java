@@ -6,15 +6,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AgendaTelefonica {
+    private String nombreDeAgenda;
     public static final int CANTIDAD_MAXIMA_CONTACTOS = 20;
     private int cantidadTotalContactos;
     private List<Contacto> contactosFavoritos;
     private List<Contacto> contactos = new ArrayList<>();
     //
 
-    public AgendaTelefonica(int cantidadTotalContactos, List<Contacto> contactosFavoritos) {
-        this.cantidadTotalContactos = cantidadTotalContactos;
-        this.contactosFavoritos = contactosFavoritos;
+
+    public AgendaTelefonica(String nombreDeAgenda) {
+        this.nombreDeAgenda = nombreDeAgenda;
     }
 
     public Contacto buscar(int numero){
@@ -22,9 +23,11 @@ public class AgendaTelefonica {
           for(Contacto contacto: this.contactos){
               if(contacto.getNumero() == numero){
                   numeroBuscado = contacto;
+
               }
           }
           return numeroBuscado;
+
     }
 
    public boolean crearContacto(Contacto contacto){
