@@ -42,7 +42,7 @@ public class AppSuper {
                     }
                     break;
                 case OPCION_VER_POR_TIPO :
-                    mostrarMensaje("Aqui va mas caro");
+                    mostrarMensaje("Ver por tipo");
                     break;
                 case OPCION_SACAR :
                     mostrarMensaje("Aqui va sacar");
