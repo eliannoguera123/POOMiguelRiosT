@@ -15,79 +15,62 @@ public class Calculadora {
     }
 
     //METODOS
+    //MOSTRAR NUMERO
+    private static void mostrarnumero(float resultado){
+         JOptionPane.showMessageDialog(null,"El total de la suma es:"+resultado);
+    }
+
     //INGRESAR NUMERO
     public int ingresarnumero(){
         int numero = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero: "));
         return numero;
     }
-    //MOSTRAR NUMERO
-    private static void mostrarnumero(int numero){
-        JOptionPane.showMessageDialog(null,numero,"Calculadora",JOptionPane.QUESTION_MESSAGE,icono);
-    }
-
-
     //SUMAR N NUMEROS
-    public int sumar(){
+    public int sumar(int n){
         int sumaT=0;
-        n = Integer.parseInt(JOptionPane.showInputDialog("Ingrese n "));
         for(int i=0;i<n;i++){
-           // numero=Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero"));//bien
             numero = ingresarnumero();
             sumaT = sumaT+numero;
         }
-        JOptionPane.showMessageDialog(null,"El total de la suma es:"+sumaT);//bien
-        //mostrarnumero(sumaT);
+        mostrarnumero(sumaT);
         return sumaT;
     }
 
     //RESTAR N NUMEROS
-    public int restar(){
+    public int restar(int n){
         int restaT=0;
-        n = Integer.parseInt(JOptionPane.showInputDialog("Ingrese n "));
         for(int i=0;i<n;i++){
-            //numero=Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero"));
             numero = ingresarnumero();
             if(i>0){
                 numero*=-1;
             }
             restaT+=numero;
         }
-        JOptionPane.showMessageDialog(null,"El total de la resta es:"+restaT);
+        mostrarnumero(restaT);
         return restaT;
     }
     //MULTIPLICAR N NUMEROS
-    public int multiplicar(){
+    public int multiplicar(int n){
         int multiplicacionT=1;
-        n = Integer.parseInt(JOptionPane.showInputDialog("Ingrese n "));
-
         for(int i=0;i<n;i++){
-            //numero=Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero"));
             numero = ingresarnumero();
             multiplicacionT=multiplicacionT*numero;
         }
-        JOptionPane.showMessageDialog(null,"El total de la multiplicacion es:"+multiplicacionT);
-
+        mostrarnumero(multiplicacionT);
         return multiplicacionT;
     }
     //DIVISION N NUMEROS
-    public float dividir(){
+    public float dividir(int n){
         float divisionT=1;
-        float aux;
-        n = Integer.parseInt(JOptionPane.showInputDialog("Ingrese n "));
-        //numero=Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero"));
         numero = ingresarnumero();
-        aux=numero;
-        divisionT=aux/divisionT;
+        divisionT=numero/divisionT;
         for(int i=1;i<n;i++){
-            //numero=Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero"));
             numero = ingresarnumero();
             divisionT=(float)(divisionT/numero);
         }
-        JOptionPane.showMessageDialog(null,"El total de la division es:"+divisionT);
-
+        mostrarnumero(divisionT);
         return divisionT;
     }
-
     //GETTER
     public String getMarcaCalculadora() {
         return marcaCalculadora;

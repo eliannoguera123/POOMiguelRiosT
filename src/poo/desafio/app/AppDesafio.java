@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.util.Arrays;
 
 public class AppDesafio {
-    private static ImageIcon icono = new ImageIcon("C:/Users/HG/MiguelRiosTPOO/uco.png");
+    private static ImageIcon icono = new ImageIcon("C:/Users/HG/MiguelRiosTPOO/calculadoraicon.png");
     private static final int OPCION_SUMAR = 0;
     private static final int OPCION_RESTAR = 1;
     private static final int OPCION_MULTIPLICAR = 2;
@@ -12,6 +12,7 @@ public class AppDesafio {
 
     public static void main(String[] args) {
         Calculadora calculadora = new Calculadora("LG");
+        int n;
         while(true){
             int opcionElegida = JOptionPane.showOptionDialog(null, "Elije una opcion",
                     "Calculadora ", 0, 0, icono,
@@ -19,16 +20,20 @@ public class AppDesafio {
 
             switch (opcionElegida) {
                 case OPCION_SUMAR :
-                    calculadora.sumar();
+                    n = Integer.parseInt(JOptionPane.showInputDialog("Ingrese n "));
+                    calculadora.sumar(n);
                     break;
                 case OPCION_RESTAR :
-                    calculadora.restar();
+                    n = Integer.parseInt(JOptionPane.showInputDialog("Ingrese n "));
+                    calculadora.restar(n);
                     break;
                 case OPCION_MULTIPLICAR :
-                    calculadora.multiplicar();
+                    n = Integer.parseInt(JOptionPane.showInputDialog("Ingrese n "));
+                    calculadora.multiplicar(n);
                     break;
                 case OPCION_DIVIDIR :
-                    calculadora.dividir();
+                    n = Integer.parseInt(JOptionPane.showInputDialog("Ingrese n "));
+                    calculadora.dividir(n);
                     break;
                 case JOptionPane.CLOSED_OPTION:
                     return;
