@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.util.Arrays;
 
 public class AppDesafio {
-    private static ImageIcon icono = new ImageIcon("C:/Users/HG/MiguelRiosTPOO/calculadoraicon.png");
+    private static ImageIcon icono = new ImageIcon("C:/Users/HG/MiguelRiosTPOO/uco.png");
     private static final int OPCION_SUMAR = 0;
     private static final int OPCION_RESTAR = 1;
     private static final int OPCION_MULTIPLICAR = 2;
