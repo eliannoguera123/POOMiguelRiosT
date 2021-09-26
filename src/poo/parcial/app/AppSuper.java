@@ -25,7 +25,7 @@ public class AppSuper {
         while (true) {
             int opcionElegida = JOptionPane.showOptionDialog(null, "Elige una de las siguientes opciones",
                     "POO", 0, 0, icono,
-                    Arrays.asList("Agregar Producto", "Sacar producto", "Ver más caro", "Ver total", "Ver por tipo").toArray(), null);
+                    Arrays.asList("Agregar Producto", "Sacar productoo", "Ver más caro", "Ver total", "Ver por tipo").toArray(), null);
 
             switch (opcionElegida) {
                 case OPCION_AGREGAR :
