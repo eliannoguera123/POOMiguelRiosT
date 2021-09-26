@@ -17,7 +17,6 @@ public class AppDesafio {
             int opcionElegida = JOptionPane.showOptionDialog(null, "Elije una opcion",
                     "Calculadora ", 0, 0, icono,
                     Arrays.asList("Sumar", "Restar", "Multiplicar", "Dividir").toArray(), null);
-
             switch (opcionElegida) {
                 case OPCION_SUMAR :
                     n = Integer.parseInt(JOptionPane.showInputDialog("Ingrese n "));
