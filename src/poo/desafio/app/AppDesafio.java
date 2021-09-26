@@ -19,19 +19,19 @@ public class AppDesafio {
                     Arrays.asList("Sumar", "Restar", "Multiplicar", "Dividir").toArray(), null);
             switch (opcionElegida) {
                 case OPCION_SUMAR :
-                    n = Integer.parseInt(JOptionPane.showInputDialog("Ingrese n "));
+                    n = calculadora.ingresarn();
                     calculadora.sumar(n);
                     break;
                 case OPCION_RESTAR :
-                    n = Integer.parseInt(JOptionPane.showInputDialog("Ingrese n "));
+                    n = calculadora.ingresarn();
                     calculadora.restar(n);
                     break;
                 case OPCION_MULTIPLICAR :
-                    n = Integer.parseInt(JOptionPane.showInputDialog("Ingrese n "));
+                    n = calculadora.ingresarn();
                     calculadora.multiplicar(n);
                     break;
                 case OPCION_DIVIDIR :
-                    n = Integer.parseInt(JOptionPane.showInputDialog("Ingrese n "));
+                    n = calculadora.ingresarn();
                     calculadora.dividir(n);
                     break;
                 case JOptionPane.CLOSED_OPTION:
