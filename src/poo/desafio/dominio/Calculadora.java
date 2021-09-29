@@ -89,6 +89,7 @@ public class Calculadora {
         return multiplicacionT;
     }
     //DIVISION N NUMEROS
+    //d
     public double dividir(int n){
         double divisionT=1;
         numero = ingresarnumero();
