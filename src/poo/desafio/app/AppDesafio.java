@@ -46,8 +46,23 @@ public class AppDesafio {
                     break;
 
                 case OPCION_RESTAR :
-                    //n = ingresarn();
-                    //calculadora.restar(n);
+                    n = ingresarN();
+                    for(int i = 0; i< n; i++){
+                        double numero = 0;
+                        do{
+                            try{
+                                numero = ingresarNumero();
+                                listaNumeros.add(numero);
+                            }catch (NumberFormatException error){
+                                mostrarMensaje("Numero no válido");
+                            }
+                            System.out.println(listaNumeros);
+                        }while(numero<0);
+                    }
+                    double resultadoResta = calculadora.restar(listaNumeros);
+                    mostrarMensaje("El resultado de la suma es: " + resultadoResta);
+                    listaNumeros.clear();
+
                     break;
 
                 case OPCION_MULTIPLICAR :
@@ -70,8 +85,22 @@ public class AppDesafio {
                     break;
 
                 case OPCION_DIVIDIR :
-                    //n = calculadora.ingresarn();
-                   // calculadora.dividir(n);
+                    n = ingresarN();
+                    for(int i = 0; i< n; i++){
+                        double numero = 0;
+                        do{
+                            try{
+                                numero = ingresarNumero();
+                                listaNumeros.add(numero);
+                            }catch (NumberFormatException error){
+                                mostrarMensaje("Numero no válido");
+                            }
+                            System.out.println(listaNumeros);
+                        }while(numero<0);
+                    }
+                   double resultadoDivision = calculadora.dividir(listaNumeros, checkBox.isSelected());
+                    mostrarMensaje("El resultado de la división es: "+resultadoDivision);
+                    listaNumeros.clear();
                     break;
 
                 case OPCION_CHECKBOX :
@@ -84,7 +113,9 @@ public class AppDesafio {
         }
         }
 
-        //Metodos
+        //METODOS
+
+        //INGRESAR N
     public static int ingresarN(){
         do{
             try{
@@ -99,6 +130,7 @@ public class AppDesafio {
         return n;
     }
 
+    //INGRESAR NUMERO
     public static double ingresarNumero(){
         do{
             try{
@@ -110,10 +142,8 @@ public class AppDesafio {
             }
         }while(true);
     }
-    private static void mostrarNumero(double resultado){
-        JOptionPane.showMessageDialog(null,"El total es:"+resultado);
-    }
 
+    //MOSTRAR MENSAJE
     private static void mostrarMensaje(String mensaje){
         JOptionPane.showMessageDialog(null,mensaje);
     }

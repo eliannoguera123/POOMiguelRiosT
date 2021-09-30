@@ -32,42 +32,28 @@ public class Calculadora {
         return resultado;
     }
 
-    /*//RESTAR N NUMEROS
-    public double restar(int n){
-        double restaT=0;
-        for(int i=0;i<n;i++){
-            numero = ingresarnumero();
-            if(i>0){
-                numero*=-1;
-            }
-            restaT+=numero;
+    //RESTAR N NUMEROS
+    public double restar(List<Double> numeros){
+        double resultado=0;
+        for(double num: numeros){
+            resultado = resultado-num;
         }
-        mostrarnumero(restaT);
-        return restaT;
+        return resultado;
     }
-    //MULTIPLICAR N NUMEROS
-    public double multiplicar(int n){
-        double multiplicacionT=1;
-        for(int i=0;i<n;i++){
-            numero = ingresarnumero();
-            multiplicacionT=multiplicacionT*numero;
+
+    //DIVIDIR N NUMEROS
+    public double dividir(List<Double> numeros, boolean redondear){
+        double resultado = numeros.get(0);
+        for(double num: numeros){
+            resultado = (double) (resultado/num);
         }
-        mostrarnumero(multiplicacionT);
-        return multiplicacionT;
+        if(redondear==true){
+            return Math.round(resultado);
+        }else{
+
+            return resultado;
+        }
     }
-    //DIVISION N NUMEROS
-    //d
-    public double dividir(int n){
-        double divisionT=1;
-        numero = ingresarnumero();
-        divisionT=numero/divisionT;
-        for(int i=1;i<n;i++){
-            numero = ingresarnumero();
-            divisionT=(double) (divisionT/numero);
-        }
-        mostrarnumero(divisionT);
-        return divisionT;
-    }*/
 
     //GETTER
     public String getMarcaCalculadora() {
