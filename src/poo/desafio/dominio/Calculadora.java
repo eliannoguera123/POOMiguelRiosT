@@ -5,9 +5,7 @@ import javax.swing.*;
 public class Calculadora {
     private static ImageIcon icono = new ImageIcon("C:/Users/HG/MiguelRiosTPOO/uco.png");
     private String marcaCalculadora;
-    private double numero;
-    private int n;
-    private double resultado;
+
 
     public Calculadora(String marcaCalculadora) {
         this.marcaCalculadora = marcaCalculadora;
@@ -15,57 +13,26 @@ public class Calculadora {
     }
 
     //METODOS
-    //MOSTRAR NUMERO
-    private static void mostrarnumero(double resultado){
-         JOptionPane.showMessageDialog(null,"El total es:"+resultado);
-    }
-
-
-    /*public int ingresarnumero(){
-        int numero = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero: "));
-        return numero;
-    }*/
-
-    public int ingresarn(){
-        do{
-            try{
-                n = Integer.parseInt(JOptionPane.showInputDialog("Ingrese n "));
-                if(n<1){
-                    JOptionPane.showMessageDialog(null,"Numero ingresado no válido");
-                }
-            }catch (NumberFormatException ee){
-                JOptionPane.showMessageDialog(null,"Numero ingresado no válido");
-            }
-        }while(n<1);
-        return n;
-    }
-    //INGRESAR NUMERO
-    public double ingresarnumero(){
-        do{
-            try{
-                double numero = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el numero: "));
-                return numero;
-            }catch(NumberFormatException ee){
-                JOptionPane.showMessageDialog(null,"Numero ingresado no valido");
-                continue;
-            }
-        }while(true);
-    }
-
 
     //SUMAR N NUMEROS
-    public double sumar(int n){
-
-        double sumaT=0;
-        for(int i=0;i<n;i++){
-            numero = ingresarnumero();
-            sumaT = sumaT+numero;
+    public double sumar(List<Double> numeros){
+        double resultado = 0;
+        for(double num: numeros){
+            resultado+=num;
         }
-        mostrarnumero(sumaT);
-        return sumaT;
+        return resultado;
     }
 
-    //RESTAR N NUMEROS
+    //MULTIPLICAR N NUMEROS
+    public double multiplicar(List<Double> numeros){
+        double resultado = 1;
+        for(double num: numeros){
+            resultado*=num;
+        }
+        return resultado;
+    }
+
+    /*//RESTAR N NUMEROS
     public double restar(int n){
         double restaT=0;
         for(int i=0;i<n;i++){
@@ -100,18 +67,12 @@ public class Calculadora {
         }
         mostrarnumero(divisionT);
         return divisionT;
-    }
+    }*/
+
     //GETTER
     public String getMarcaCalculadora() {
         return marcaCalculadora;
     }
 
-    public double getNumero() {
-        return numero;
-    }
-
-    public double getResultado() {
-        return resultado;
-    }
 
 }
