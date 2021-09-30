@@ -34,19 +34,35 @@ public class Calculadora {
 
     //RESTAR N NUMEROS
     public double restar(List<Double> numeros){
+        double cont=0;
         double resultado=0;
-        for(double num: numeros){
-            resultado = resultado-num;
+        for (double num: numeros) {
+            if(cont==0){
+                resultado=num;
+                cont++;
+            }else {
+                resultado=resultado-num;
+                cont++;
+            }
+
         }
         return resultado;
     }
 
     //DIVIDIR N NUMEROS
     public double dividir(List<Double> numeros, boolean redondear){
-        double resultado = numeros.get(0);
-        for(double num: numeros){
-            resultado = (double) (resultado/num);
+        double cont = 1;
+        double resultado = 1;
+        for (double num: numeros) {
+            if(cont==1){
+                resultado=num;
+                cont++;
+            }else {
+                resultado=resultado/num;
+                cont++;
+            }
         }
+
         if(redondear==true){
             return Math.round(resultado);
         }else{

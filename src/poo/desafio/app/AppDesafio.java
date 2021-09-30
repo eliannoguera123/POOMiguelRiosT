@@ -60,7 +60,7 @@ public class AppDesafio {
                         }while(numero<0);
                     }
                     double resultadoResta = calculadora.restar(listaNumeros);
-                    mostrarMensaje("El resultado de la suma es: " + resultadoResta);
+                    mostrarMensaje("El resultado de la resta es: " + resultadoResta);
                     listaNumeros.clear();
 
                     break;
