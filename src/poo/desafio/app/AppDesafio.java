@@ -143,7 +143,7 @@ public class AppDesafio {
         }while(true);
     }
 
-    //MOSTRAR MENSAJE
+    //MOSTRAR MENSAJEE
     private static void mostrarMensaje(String mensaje){
         JOptionPane.showMessageDialog(null,mensaje);
     }
