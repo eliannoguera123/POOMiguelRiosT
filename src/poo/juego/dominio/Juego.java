@@ -21,7 +21,7 @@ public class Juego {
         this.juegoNombre = juegoNombre;
     }
 
-    //METODOS
+    //METODOSS
 
     public int jugadaPC() {
         int opcionPC = (int) (Math.random() * 2 + 1);

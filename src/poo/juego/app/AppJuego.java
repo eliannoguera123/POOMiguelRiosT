@@ -56,7 +56,7 @@ public class AppJuego {
         }
     }
 
-    //METODOS
+    //METODOSS
     public static String ingresarNombre(){
         String nombreJugador;
 
