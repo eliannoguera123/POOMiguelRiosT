@@ -31,12 +31,12 @@ public class Juego {
     public String jugar(int jugadaJugador, int jugadaPC) {
         if (jugadaJugador == PIEDRA && jugadaPC == TIJERA) {
             ganadasJugador++;
-            return "Ganaste"+getNombreJugador();
+            return "Ganaste "+getNombreJugador();
         } else if (jugadaJugador == PAPEL && jugadaPC == PIEDRA) {
             ganadasJugador++;
-            return "Ganaste"+getNombreJugador();
+            return "Ganaste "+getNombreJugador();
         } else if (jugadaJugador == TIJERA && jugadaPC == PAPEL) {
-            return "Ganaste"+getNombreJugador();
+            return "Ganaste "+getNombreJugador();
         } else if(jugadaJugador == jugadaPC){
             empates++;
             return "EMPATE!";
@@ -64,5 +64,19 @@ public class Juego {
 
     public int getEmpates() {
         return empates;
+    }
+
+    //SETT PARA RESETEAR PUNTAJES
+
+    public void setGanadasJugador(int ganadasJugador) {
+        this.ganadasJugador = ganadasJugador;
+    }
+
+    public void setGanadasPC(int ganadasPC) {
+        this.ganadasPC = ganadasPC;
+    }
+
+    public void setEmpates(int empates) {
+        this.empates = empates;
     }
 }
