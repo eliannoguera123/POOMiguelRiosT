@@ -21,12 +21,14 @@ public class AppJuego {
 
                 case OPCION_JUGAR:
 
-                    if(ingresarNombre() == null){
+                    if(juego.getNombreJugador() == null){
                         juego.setNombreJugador(ingresarNombre());
                     }
+                    JOptionPane.showMessageDialog(null,"Bienvenido "+juego.getNombreJugador());
+
                     int jugadaPC = juego.jugadaPC();
-                    int jugadaElegidaJugador = (int) JOptionPane.showInputDialog(null, "Seleccione:",
-                            "Juego", JOptionPane.QUESTION_MESSAGE, icono, Juego.OPCION.toArray(), null);
+                    int jugadaElegidaJugador = JOptionPane.showOptionDialog(null,"Seleccione: ","Juego",0,JOptionPane.QUESTION_MESSAGE,icono,Arrays.asList("PIEDRA","PAPEL","TIJERA").toArray(),null);
+
                     JOptionPane.showMessageDialog(null,juego.getNombreJugador()+"Seleccionó: \n"+jugada(jugadaElegidaJugador)+"\n"+"PC seleccionó: \n"+jugada(jugadaPC));
                     String mostrarResultado = juego.jugar(jugadaElegidaJugador,jugadaPC);
                     JOptionPane.showMessageDialog(null,mostrarResultado);
@@ -48,10 +50,7 @@ public class AppJuego {
                 case JOptionPane.CLOSED_OPTION:
                     return;
             }
-
-
         }
-
     }
 
     //METODOS
