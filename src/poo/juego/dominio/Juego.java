@@ -36,6 +36,7 @@ public class Juego {
             ganadasJugador++;
             return "Ganaste "+getNombreJugador();
         } else if (jugadaJugador == TIJERA && jugadaPC == PAPEL) {
+            ganadasJugador++;
             return "Ganaste "+getNombreJugador();
         } else if(jugadaJugador == jugadaPC){
             empates++;
