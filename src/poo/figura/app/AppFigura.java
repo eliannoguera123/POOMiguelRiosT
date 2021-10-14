@@ -29,8 +29,7 @@ public class AppFigura {
         Cuadrado cuadrado = new Cuadrado("Azul",true,30);
         Circulo circulo = new Circulo("Rojo",true,20);
         Triangulo triangulo = new Triangulo("Verde",true,4,5,2,3,4);
-        Figura trianguloRectangulo = new TrianguloRectangulo("Verde",true,20,4,8,8,8,8,8);
-
+        Figura trianguloRectangulo = new TrianguloRectangulo("Amarillo",true,20,4,8,5,3,2,4,2);
 
         figuras.add(cuadrado);
         figuras.add(circulo);

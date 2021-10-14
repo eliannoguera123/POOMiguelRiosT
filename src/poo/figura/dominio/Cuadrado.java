@@ -2,7 +2,6 @@ package poo.figura.dominio;
 
 public class Cuadrado extends Figura{
     private double lado;
-
     private double resultadoArea;
     private double resultadoPerimetro;
 
