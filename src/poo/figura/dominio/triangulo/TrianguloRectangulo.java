@@ -12,7 +12,7 @@ public class TrianguloRectangulo extends Triangulo {
         this.catetoB = catetoB;
     }
 
-    public double perimetroConCatetos(){
+    private double perimetroConCatetos(double catetoA, double catetoB){
         double hipotenusa = Math.sqrt((catetoA*catetoA)+(catetoB*catetoB));
         resultadoPerimetro = catetoA+catetoB+hipotenusa;
         System.out.println("El PERIMETRO del triangulo de cateto A: "+catetoA+" cateto B: "+catetoB+" es: "+resultadoPerimetro);

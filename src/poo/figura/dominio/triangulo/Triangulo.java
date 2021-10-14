@@ -33,4 +33,24 @@ public class Triangulo extends Figura {
         System.out.println("El PERIMETRO del triangulo de lado 1: "+lado1+" lado 2: "+lado2+" y lado 3: "+lado3+" es: "+resultadoPerimetro);
         return resultadoPerimetro;
     }
+
+    public double getBase() {
+        return base;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public double getLado1() {
+        return lado1;
+    }
+
+    public double getLado2() {
+        return lado2;
+    }
+
+    public double getLado3() {
+        return lado3;
+    }
 }

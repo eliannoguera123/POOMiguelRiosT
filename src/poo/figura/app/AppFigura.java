@@ -9,8 +9,20 @@ import poo.figura.dominio.triangulo.TrianguloRectangulo;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class AppFigura {
+
+    public static void mostrarAreas(List<Figura> figuras){
+        figuras.forEach(figu -> {
+            figu.area();
+        });
+    }
+
+    public static void mostrarPeriemtros(List<Figura> figuras){
+        figuras.forEach(figu -> {
+            figu.perimetro();
+        });
+    }
+
     public static void main(String[] args){
 
         List<Figura> figuras = new ArrayList<>();
@@ -26,6 +38,13 @@ public class AppFigura {
         figuras.add(trianguloRectangulo);
 
         System.out.println("...AREAS DE LAS FIGURAS EN LA LISTA...");
+        mostrarAreas(figuras);
+        System.out.println("\n");
+        System.out.println("...PERIMETROS DE LAS FIGURAS EN LA LISTA...");
+        mostrarPeriemtros(figuras);
+
+
+        /*System.out.println("...AREAS DE LAS FIGURAS EN LA LISTA...");
         cuadrado.area();
         circulo.area();
         triangulo.area();
@@ -36,7 +55,7 @@ public class AppFigura {
         cuadrado.perimetro();
         circulo.perimetro();
         triangulo.perimetro();
-        trianguloRectangulo.perimetro();
+        trianguloRectangulo.perimetro();*/
 
     }
 
