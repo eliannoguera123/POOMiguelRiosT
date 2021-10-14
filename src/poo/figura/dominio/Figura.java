@@ -9,7 +9,14 @@ public class Figura {
         this.relleno = relleno;
     }
 
-    public int area(){
+    //METODOS
+    public double area(){
+        System.out.println("Calculando Area... ");
+        return 0;
+    }
+
+    public double perimetro(){
+        System.out.println("Calculando Area... ");
         return 0;
     }
 
