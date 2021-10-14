@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Random;
 
 public class AppVehiculo {
+
     public static void aumentarVelocidad(List<Vehiculo> vehiculos) {
         vehiculos.forEach(vehi -> {
             vehi.acelerar(new Random().nextInt(50));
