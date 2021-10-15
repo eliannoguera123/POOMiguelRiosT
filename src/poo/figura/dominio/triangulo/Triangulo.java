@@ -25,7 +25,7 @@ public class Triangulo extends Figura {
     @Override
     public double area(){
         resultadoArea = (base*altura)/2;
-        System.out.println("El AREA del triangulo de base "+base+" y altura "+altura+" es: "+resultadoArea);
+        System.out.println("El AREA del triangulo de base="+base+" y altura="+altura+" es:"+resultadoArea);
         return resultadoArea;
     }
 

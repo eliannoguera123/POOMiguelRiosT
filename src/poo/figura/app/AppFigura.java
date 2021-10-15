@@ -4,6 +4,8 @@ import poo.figura.dominio.Circulo;
 import poo.figura.dominio.Cuadrado;
 import poo.figura.dominio.Figura;
 import poo.figura.dominio.triangulo.Triangulo;
+import poo.figura.dominio.triangulo.TrianguloEquilatero;
+import poo.figura.dominio.triangulo.TrianguloEscaleno;
 import poo.figura.dominio.triangulo.TrianguloRectangulo;
 
 import java.util.ArrayList;
@@ -27,20 +29,26 @@ public class AppFigura {
 
         List<Figura> figuras = new ArrayList<>();
         Cuadrado cuadrado = new Cuadrado("Azul",true,30);
-        Circulo circulo = new Circulo("Rojo",true,20);
+        Circulo circulo = new Circulo("Rojo",true,5);
         Triangulo triangulo = new Triangulo("Verde",true,4,5,2,3,4);
-        Figura trianguloRectangulo = new TrianguloRectangulo("Amarillo",true,20,4,8,5,3,2,4,2);
+        Figura trianguloRectangulo = new TrianguloRectangulo("Amarillo",true,20,4,8,5,3,1,8);
+        Triangulo trianguloEquilatero = new TrianguloEquilatero("Azul",true,3,2,6,4,25);
+        Triangulo trianguloEscaleno = new TrianguloEscaleno("Rojo",true,20,4,8,5,10);
 
         figuras.add(cuadrado);
         figuras.add(circulo);
         figuras.add(triangulo);
         figuras.add(trianguloRectangulo);
+        figuras.add(trianguloEquilatero);
+        figuras.add(trianguloEscaleno);
 
         System.out.println("...AREAS DE LAS FIGURAS EN LA LISTA...");
         mostrarAreas(figuras);
         System.out.println("\n");
         System.out.println("...PERIMETROS DE LAS FIGURAS EN LA LISTA...");
         mostrarPeriemtros(figuras);
+
+
 
 
         /*System.out.println("...AREAS DE LAS FIGURAS EN LA LISTA...");

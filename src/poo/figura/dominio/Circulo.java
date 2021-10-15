@@ -13,14 +13,14 @@ public class Circulo extends Figura {
     @Override
     public double area() {
         resultadoArea = (Math.PI)*(radio*radio);
-        System.out.println("El AREA del circulo de radio "+radio+" es: "+resultadoArea);
+        System.out.println("El AREA del circulo de radio="+radio+" es:"+resultadoArea);
         return resultadoArea;
     }
 
     @Override
     public double perimetro() {
-        resultadoPerimetro=(2*Math.PI*radio);
-        System.out.println("El PERIMETRO del circulo de radio "+radio+" es: "+resultadoArea);
+        resultadoPerimetro=(2*radio)*Math.PI;
+        System.out.println("El PERIMETRO del circulo de radio="+radio+" es:"+resultadoPerimetro);
         return resultadoPerimetro;
     }
 

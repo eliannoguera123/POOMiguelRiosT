@@ -14,14 +14,14 @@ public class Cuadrado extends Figura{
     @Override
     public double area(){
         resultadoArea = lado*lado;
-        System.out.println("El AREA del cuadrado de lado "+lado+" es: "+resultadoArea);
+        System.out.println("El AREA del cuadrado de lado "+lado+" es:"+resultadoArea);
         return resultadoArea;
     }
 
     @Override
     public double perimetro() {
         resultadoPerimetro = (lado+lado+lado+lado);
-        System.out.println("El PERIMETRO del cuadrado de lado "+lado+" es: "+resultadoPerimetro);
+        System.out.println("El PERIMETRO del cuadrado de lado "+lado+" es:"+resultadoPerimetro);
         return resultadoPerimetro;
     }
 
