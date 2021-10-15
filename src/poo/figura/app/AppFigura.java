@@ -33,7 +33,7 @@ public class AppFigura {
         Triangulo triangulo = new Triangulo("Verde",true,4,5,2,3,4);
         Figura trianguloRectangulo = new TrianguloRectangulo("Amarillo",true,20,4,8,5,3,1,8);
         Triangulo trianguloEquilatero = new TrianguloEquilatero("Azul",true,3,2,6,4,25);
-        Triangulo trianguloEscaleno = new TrianguloEscaleno("Rojo",true,20,4,8,5,10);
+        Triangulo trianguloEscaleno = new TrianguloEscaleno("Gris",true,20,4,8,5,10);
 
         figuras.add(cuadrado);
         figuras.add(circulo);
