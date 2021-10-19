@@ -3,10 +3,7 @@ package poo.figura.app;
 import poo.figura.dominio.Circulo;
 import poo.figura.dominio.Cuadrado;
 import poo.figura.dominio.Figura;
-import poo.figura.dominio.triangulo.Triangulo;
-import poo.figura.dominio.triangulo.TrianguloEquilatero;
-import poo.figura.dominio.triangulo.TrianguloEscaleno;
-import poo.figura.dominio.triangulo.TrianguloRectangulo;
+import poo.figura.dominio.TrianguloRectangulo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,32 +12,29 @@ public class AppFigura {
 
     public static void mostrarAreas(List<Figura> figuras){
         figuras.forEach(figu -> {
-            figu.area();
+            System.out.println("Se calculará el área de " + figu);
+            System.out.println("Área=" + figu.area()+"\n");
         });
     }
 
     public static void mostrarPeriemtros(List<Figura> figuras){
         figuras.forEach(figu -> {
-            figu.perimetro();
+            System.out.println("Se calculará el perímetro de " + figu);
+            System.out.println("Perímetro=" + figu.perimetro() + "\n");
         });
     }
 
     public static void main(String[] args){
 
         List<Figura> figuras = new ArrayList<>();
-        Cuadrado cuadrado = new Cuadrado("Azul",true,30);
-        Circulo circulo = new Circulo("Rojo",true,5);
-        Triangulo triangulo = new Triangulo("Verde",true,4,5,2,3,4);
-        Figura trianguloRectangulo = new TrianguloRectangulo("Amarillo",true,20,4,8,5,3,1,8);
-        Triangulo trianguloEquilatero = new TrianguloEquilatero("Azul",true,3,2,6,4,25);
-        Triangulo trianguloEscaleno = new TrianguloEscaleno("Gris",true,20,4,8,5,10);
+        Cuadrado cuadrado = new Cuadrado(30,5);
+        Circulo circulo = new Circulo(5);
+        Figura TrianguloRectangulo = new TrianguloRectangulo(10, 20);
 
         figuras.add(cuadrado);
         figuras.add(circulo);
-        figuras.add(triangulo);
-        figuras.add(trianguloRectangulo);
-        figuras.add(trianguloEquilatero);
-        figuras.add(trianguloEscaleno);
+        figuras.add(TrianguloRectangulo);
+
 
         System.out.println("...AREAS DE LAS FIGURAS EN LA LISTA...");
         mostrarAreas(figuras);

@@ -1,38 +1,29 @@
 package poo.figura.dominio;
 
 public class Cuadrado extends Figura{
-    private double lado;
-    private double resultadoArea;
-    private double resultadoPerimetro;
+    private double lado1;
+    private double lado2;
 
-    public Cuadrado(String color, boolean relleno, double lado) {
-        super(color, relleno);
-        this.lado = lado;
-
+    public Cuadrado(double lado1, double lado2) {
+        this.lado1 = lado1;
+        this.lado2 = lado2;
     }
 
     @Override
     public double area(){
-        resultadoArea = lado*lado;
-        System.out.println("El AREA del cuadrado de lado "+lado+" es:"+resultadoArea);
-        return resultadoArea;
+        return lado1*lado2;
     }
 
     @Override
     public double perimetro() {
-        resultadoPerimetro = (lado+lado+lado+lado);
-        System.out.println("El PERIMETRO del cuadrado de lado "+lado+" es:"+resultadoPerimetro);
-        return resultadoPerimetro;
+        return (lado1*2)+(lado2*2);
     }
 
-    public double getAncho() {
-        return lado;
+    @Override
+    public String toString() {
+        return "Cuadrado{" +
+                "lado1=" + lado1 +
+                ", lado2=" + lado2 +
+                '}';
     }
-
-    public void setAncho(double ancho) {
-        this.lado = ancho;
-    }
-
-
-
 }
