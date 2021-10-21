@@ -11,4 +11,5 @@ public  class FacturaSinIva extends Factura{
     public long calcularTotal() {
         return 0; // en este return quisiera llamar al valor de valor del constructor de arriba
     }
+
 }
