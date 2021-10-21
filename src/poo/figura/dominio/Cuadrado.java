@@ -26,4 +26,6 @@ public class Cuadrado extends Figura{
                 ", lado2=" + lado2 +
                 '}';
     }
+
+
 }

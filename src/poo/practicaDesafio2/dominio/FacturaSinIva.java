@@ -9,7 +9,6 @@ public  class FacturaSinIva extends Factura{
 
    @Override
     public long calcularTotal() {
-        return 0;
+        return 0; // en este return quisiera llamar al valor de valor del constructor de arriba
     }
-
 }

@@ -1,6 +1,7 @@
 package poo.practicaDesafio2.app;
 
 
+
 import poo.practicaDesafio2.dominio.*;
 
 import java.time.LocalDateTime;
@@ -8,8 +9,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AppFacturacion {
+
     public static void mostrarTotal(){
 
+    }
+
+    public static void mostrarValores(List<Factura> facturas){
+        facturas.forEach(factu -> {
+            System.out.println("Valor: " + factu.calcularTotal());
+        });
     }
 
     public static void main(String[] args){
@@ -26,6 +34,7 @@ public class AppFacturacion {
         facturas.add(facturaSinIva);
         facturas.add(facturaConDescuento);
 
+       mostrarValores(facturas);
     }
 
 }
