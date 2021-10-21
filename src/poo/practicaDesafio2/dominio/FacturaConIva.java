@@ -1,11 +1,18 @@
 package poo.practicaDesafio2.dominio;
 
-public abstract class FacturaConIva extends Factura {
+import java.time.LocalDateTime;
+
+public class FacturaConIva extends Factura {
     private int iva;
 
-  /*  @Override
+    public FacturaConIva(int numero, long valor, LocalDateTime fecha, int iva) {
+        super(numero, valor, fecha);
+        this.iva = iva;
+    }
+
+    @Override
     public long calcularTotal() {
         return 0;
-    }*/
+    }
 
 }

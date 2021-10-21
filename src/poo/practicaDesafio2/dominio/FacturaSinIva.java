@@ -1,11 +1,15 @@
 package poo.practicaDesafio2.dominio;
 
-public abstract class FacturaSinIva extends Factura{
+import java.time.LocalDateTime;
 
+public  class FacturaSinIva extends Factura{
+    public FacturaSinIva(int numero, long valor, LocalDateTime fecha) {
+        super(numero, valor, fecha);
+    }
 
-   /* @Override
+   @Override
     public long calcularTotal() {
         return 0;
-    }*/
+    }
 
 }
