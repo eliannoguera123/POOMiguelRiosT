@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 public abstract class Factura {
     private int numero;
-    private long valor;
+    public long valor;
     private LocalDateTime fecha;
 
     public Factura(int numero, long valor, LocalDateTime fecha) {
